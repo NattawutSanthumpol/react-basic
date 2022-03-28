@@ -1,13 +1,24 @@
 import { useContext } from "react"
 import DataContext from "../data/DataContext"
+import './ReportComponent.css'
 
-
-const ReportComponent=()=>{
-     const {income,expanse} = useContext(DataContext)
-     return(
+const ReportComponent = () => {
+     const { income, expanse } = useContext(DataContext)
+     return (
           <div>
-               <p>รายรับ : {income}</p>
-               <p>รายจ่าย : {expanse}</p>
+               <h4>ยอดคงเหลือ (บาท)</h4>
+               <h1>฿{income - expanse}</h1>
+               <div className="report-container">
+                    <div>
+                         <h4>รายได้ทั้งหมด</h4>
+                         <p className="report plus">{income}</p>
+                    </div>
+                    <div>
+                         <h4>รายจ่ายทั้งหมด</h4>
+                         <p className="report minus">{expanse}</p>
+                    </div>
+               </div>
+
                {/* <DataContext.Consumer>
                     {context=><p>รายรับ : {context.income} รายจ่าย : {context.expense}</p>}
                </DataContext.Consumer> */}

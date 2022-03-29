@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './formComponent.css'
 import { v4 as uuidv4 } from 'uuid';
+import NumberFormat from 'react-number-format';
 
 const FormComponent = (props) => {
 
@@ -45,6 +46,7 @@ const FormComponent = (props) => {
                     <div className="form-control">
                          <label>จำนวนเงิน</label>
                          <input type="number" placeholder="(+ รายรับ , - รายจ่าย)" onChange={inputAmount} value={amount} />
+
                     </div>
                     <div>
                          <button type="submit" className='btn' disabled={!formValid}>เพิ่มข้อมูล</button>

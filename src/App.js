@@ -6,7 +6,7 @@ import FormComponent from './components/FormComponent';
 import { useState, useEffect, useReducer } from 'react';
 import DataContext from './data/DataContext';
 import ReportComponent from './components/ReportComponent';
-import { BrowserRouter as Router, Switch, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 
 function App() {

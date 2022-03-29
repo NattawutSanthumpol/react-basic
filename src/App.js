@@ -16,7 +16,7 @@ function App() {
     { id: 3, title: "เงินพิเศษ", amount: 10000 },
     { id: 4, title: "ค่าบ้าน", amount: -10500 },
   ]
-  const [items, setItems] = useState(initData)
+  const [items, setItems] = useState([])
   const [reportIncome, setReportIncome] = useState(0)
   const [reportExpense, setReportExpense] = useState(0)
   const onAddNewItem = (newItem) => {
